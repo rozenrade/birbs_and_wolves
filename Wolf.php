@@ -4,14 +4,15 @@ class Wolf extends Animal implements SavageAnimal
 {
     protected bool $alone;
 
+
     /**
-     * @param mixed $name
-     * @param mixed $age
-     * @param mixed $nbPalette
-     * @param mixed $listAliment
-     * @param mixed $alone
+     * @param string $name
+     * @param int $age
+     * @param int $nbPalette
+     * @param array $listAliment
+     * @param bool $alone
      */
-    public function __construct($name, $age, $nbPalette, $listAliment, $alone)
+    public function __construct(string $name, int $age, int $nbPalette, array $listAliment, bool $alone)
     {
         parent::__construct($name, $age, $nbPalette, $listAliment);
         $this->alone = $alone;
