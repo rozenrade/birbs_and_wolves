@@ -11,7 +11,13 @@ abstract class Animal
     protected array $listAliment;
 
 
-    public function __construct($name, $age, $nbPalette, $listAliment)
+    /**
+     * @param string $name
+     * @param int $age
+     * @param int $nbPalette
+     * @param array $listAliment
+     */
+    public function __construct(string $name, int $age, int $nbPalette, array $listAliment)
     {
         $this->name = $name;
         $this->age = $age;
@@ -19,29 +25,30 @@ abstract class Animal
         $this->listAliment = $listAliment;
     }
 
+
     /**
-     * Get the value of name
+     * @return string
      */
     public function getName(): string
     {
         return $this->name;
     }
 
+
     /**
-     * Set the value of name
-     *
-     * @return  self
+     * @param string $name
+     * 
+     * @return self
      */
-    public function setName($name): self
+    public function setName(string $name): self
     {
         $this->name = $name;
 
         return $this;
     }
 
+
     /**
-     * Get the value of age
-     * 
      * @return int
      */
     public function getAge(): int
@@ -50,11 +57,11 @@ abstract class Animal
     }
 
     /**
-     * Set the value of age
-     *
-     * @return  self
+     * @param int $age
+     * 
+     * @return self
      */
-    public function setAge($age): self
+    public function setAge(int $age): self
     {
         $this->age = $age;
 
@@ -62,8 +69,6 @@ abstract class Animal
     }
 
     /**
-     * Get the value of nbPalette
-     * 
      * @return int
      */
     public function getNbPalette(): int
@@ -71,21 +76,21 @@ abstract class Animal
         return $this->nbPalette;
     }
 
+
     /**
-     * Set the value of nbPalette
-     *
-     * @return  self
+     * @param int $nbPalette
+     * 
+     * @return self
      */
-    public function setNbPalette($nbPalette): self
+    public function setNbPalette(int $nbPalette): self
     {
         $this->nbPalette = $nbPalette;
 
         return $this;
     }
 
+
     /**
-     * Get the value of listAliment
-     * 
      * @return array
      */
     public function getListAliment(): array
@@ -93,12 +98,13 @@ abstract class Animal
         return $this->listAliment;
     }
 
+
     /**
-     * Set the value of listAliment
-     *
-     * @return  self
+     * @param array $listAliment
+     * 
+     * @return self
      */
-    public function setListAliment($listAliment): self
+    public function setListAliment(array $listAliment): self
     {
         $this->listAliment = $listAliment;
 

@@ -4,29 +4,36 @@ class Bird extends Animal
 {
     protected bool $migrate;
 
-    public function __construct($name, $age, $nbPalette, $listAliment, $migrate)
+    /**
+     * @param string $name
+     * @param int $age
+     * @param int $nbPalette
+     * @param array $listAliment
+     * @param bool $migrate
+     */
+    public function __construct(string $name, int $age, int $nbPalette, array $listAliment, bool $migrate)
     {
         parent::__construct($name, $age, $nbPalette, $listAliment);
         $this->migrate = $migrate;
     }
 
 
+
     /**
-     * Set the value of migrate
-     *
-     * @return  bool
+     * @return bool
      */
     public function getMigrate(): bool
     {
         return $this->migrate;
     }
 
+
     /**
-     * Set the value of migrate
-     *
-     * @return  self
+     * @param bool $migrate
+     * 
+     * @return self
      */
-    public function setMigrate($migrate): self
+    public function setMigrate(bool $migrate): self
     {
         $this->migrate = $migrate;
 
@@ -34,6 +41,9 @@ class Bird extends Animal
     }
 
 
+    /**
+     * @return string
+     */
     public function describe(): string
     {
         if ($this->migrate) {
